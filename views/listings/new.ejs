@@ -1,0 +1,36 @@
+<% layout('../layout') -%>
+
+<div class="container">
+  <div class="starter-template">
+    <h1>Add space</h1>
+    <form action="/listings" method="post">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" placeholder="Name" name="name">
+      </div>
+      <div>
+     
+<div class="control-group">
+         <div class="form-group floating-label-form-group controls">
+           <input type="file" accept="image/*" name="image" >
+           <!-- <input type="submit" value="upload pics"> -->
+         </div>
+     </div>
+      </div>
+      <div>
+      <!-- <label for="name">Image Src</label>
+        <input type="text" class="form-control" id="image" placeholder="Image src" name="image">
+      </div> -->
+      <div class="form-group">
+        <label for="price">Price</label>
+        <input type="number" class="form-control" id="price" placeholder="Price" name="price">
+      </div>
+      <div class="form-group">
+        <label for="available">Available on</label>
+        <input type="date" class="form-control" id="available" placeholder="Available on" name="available">
+      </div>
+      <textarea class="form-control" rows="3" name="description" placeholder="Add your description here..."></textarea>
+      <button type="submit" class="btn btn-default">List my space!</button>
+    </form>
+  </div>
+</div>

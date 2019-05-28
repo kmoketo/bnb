@@ -1,0 +1,192 @@
+<meta charset="UTF-8">
+<title>AIRBNB</title>
+
+<!-- CSS (load bootstrap from a CDN) -->
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<style>
+    body    { padding-top:0px; }
+
+   .jumbotron {
+     padding: 0px;
+     display: flex;
+     align-items: center;
+     background-image: url('http://www.2oceansvibe.com/wp-content/uploads/2016/09/Johannesburg.jpg');
+     background-size: cover;
+     color: #ffffff;
+     height: 600px;
+     text-shadow: 0.25px 0.25px 0.25px #000000;
+   }
+.tb{
+  padding: 10px,10px,10px,10px;
+  float: left;
+  
+}
+
+
+body {
+  background: #EEE;
+  font-family: sans-serif;
+}
+.container {
+  max-width: 980px;
+  margin: auto;
+}
+.gallery {
+  margin: 10px;
+  list-style-type: none;
+  padding: 0;
+  font-size: 0;
+}
+.gallery li {
+  font-size: 13px;
+  display: inline-block;
+  position: relative;
+  width: 25%;
+  padding-bottom: 25%;
+}
+
+.gallery a {
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  top: 10px;
+  bottom: 10px;
+  overflow: hidden;
+}
+
+.gallery a img {
+  width: 100%;
+}
+
+.gallery a span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-bottom: -50px;
+  background: #000;
+  background: rgba(0, 0, 0, 0.5);
+  color: #FFF;
+  padding: 10px;
+  text-align: center;
+  transition: all 0.3s ease-out;
+}
+
+html.no-touch .gallery a:hover span,
+html.touch .gallery a.touchFocus span {
+  margin-bottom: 0;
+}
+
+
+
+
+
+@media only screen and (max-width: 740px) {
+  /* Small desktop / ipad view: 3 tiles */
+  .gallery li {
+    width: 33.3%;
+    padding-bottom: 33.3%;
+  }
+}
+@media only screen and (max-width: 540px) {
+  /* Tablet view: 2 tiles */
+  .gallery li {
+    width: 50%;
+    padding-bottom: 50%;
+  }
+}
+@media only screen and (max-width: 320px) {
+  /* Smartphone view: 1 tile */
+  .gallery li {
+    width: 100%;
+    padding-bottom: 100%;
+  }
+}
+@import url(https://fonts.googleapis.com/css?family=Montserrat:500);
+
+:root {
+	/* Base font size */
+	font-size: 10px;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+	background-color: #fafafa;
+}
+
+.container {
+	max-width: 100rem;
+	margin: 0 auto;
+	padding: 0 2rem 2rem;
+}
+
+.heading {
+	font-family: "Montserrat", Arial, sans-serif;
+	font-size: 4rem;
+	font-weight: 500;
+	line-height: 1.5;
+	text-align: center;
+	padding: 3.5rem 0;
+	color: #1a1a1a;
+}
+
+.heading span {
+	display: block;
+}
+
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	/* Compensate for excess margin on outer gallery flex items */
+	margin: -1rem -1rem;
+}
+
+.gallery-item {
+	/* Minimum width of 24rem and grow to fit available space */
+	flex: 1 0 24rem;
+	/* Margin value should be half of grid-gap value as margins on flex items don't collapse */
+	margin: 1rem;
+	box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+	overflow: hidden;
+}
+
+.gallery-image {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 400ms ease-out;
+}
+
+.gallery-image:hover {
+	transform: scale(1.15);
+}
+
+/*
+
+The following rule will only run if your browser supports CSS grid.
+
+Remove or comment-out the code block below to see how the browser will fall-back to flexbox styling. 
+
+*/
+
+@supports (display: grid) {
+	.gallery {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+		grid-gap: 2rem;
+	}
+
+	.gallery,
+	.gallery-item {
+		margin: 0;
+	}
+}
+
+</style>
